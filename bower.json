@@ -1,0 +1,18 @@
+{
+  "name": "training-home-create-web-site",
+  "description": "new verstka",
+  "main": "index.js",
+  "authors": [
+    "tony"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower",
+    "test",
+    "tests"
+  ]
+}
