@@ -3,15 +3,13 @@
   display: inline-block;
   padding-left: 15px;
   position: relative;
-  //margin-left: 280px;
-  //float: left;
   &:after {
     content: '';
     display: inline-block;
     width: 1px;
-    height: 94%;
     right: 0;
     top: 30px;
+    bottom: 0;
     position: absolute;
     background: #999999;
   }
@@ -27,28 +25,38 @@
     background: #999999;
   }
 }
+.nav-tabs {
+  border-bottom: none;
+}
 .city>li:hover {
   padding: 0 !important;
-  margin: 0!important;
-
 }
-.city > li > a:focus, .city> li > a:hover {
+.city > li > a {
+  border: none;
+  padding: 10px 0!important;
+}
+.city>li:hover span:hover {
+  background: linear-gradient(to right,#3714b0,#9b049c)!important;  //settings color hover city nav//
+  -webkit-background-clip: text!important;
+}
+.city > li > a:focus, .city > li > a:hover {
   background: transparent;
   border: none;
   border-radius: 0;
 }
 .city > li > {
   display: inline-block;
+  margin-right: 40px;
   color: #333333;
   font-family: "FiraSans-Bold";
   font-size: 24px;
   text-transform: uppercase;
+  border-bottom: 3px solid transparent;
   &:hover {
-    border-bottom: 2px solid #333333;
-    //border gradient is not work
+    border-bottom: 3px solid #333333;
     background-color: white;
     padding-bottom: 20px;
-    span:hover {
+    span {
       background: -webkit-linear-gradient(90deg, #3714b0,#9b049c);
       -webkit-background-clip: text;
     }
@@ -61,16 +69,16 @@
   a {
     text-decoration: none;
     color: #333333;
-    margin: 0 22px;
-    &:first-child {
-      margin-left: 0;
-    }
   }
 
 }
+
+.nav-tabs > li > a {
+  margin: 0!important;
+}
 .city {
   padding: 0;
-  margin: 30px 0 46px 0;
+  margin: 30px 0 35px 0;
 }
 .img-city {
   padding: 0;
@@ -193,6 +201,13 @@
 .small-tittle-city {
   margin: 0 0 17px;
   font-size: 15px;
+  padding: 0;
+  &:after {
+    content: none;
+  }                   //clear border
+  &:before {
+    content: none;
+  }
 }
 .small-text-media-city {
   width: 167px;
@@ -229,6 +244,11 @@
     }
   }
 }
+.time-small-img-city {
+  display: inline-block;
+  margin-bottom: 17px;
+}
+
 
     //--btn всі новини--//
 .all-news {
@@ -254,6 +274,5 @@
   img {
     width: 100%;
     height: auto;
-
   }
 }
